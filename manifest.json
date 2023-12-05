@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Context Menu Text Popup",
+    "version": "1.0",
+    "description": "Displays selected text in a popup",
+    "permissions": ["contextMenus", "storage"],
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "commands": {
+      "showPopup": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+Y"
+        },
+        "description": "Show Popup"
+      }
+    }
+  }
+  
