@@ -9,8 +9,7 @@
       "default_popup": "popup.html"
     },
     "background": {
-      "scripts": ["background.js"],
-      "persistent": false
+      "scripts": ["background.js"]
     },
     "content_scripts": [
       {
@@ -19,9 +18,10 @@
       }
     ],
     "commands": {
-      "showPopup": {
+      "_execute_browser_action": {
         "suggested_key": {
-          "default": "Ctrl+Shift+Y"
+          "default": "Ctrl+Shift+Y",
+          "mac": "MacCtrl+Shift+Y"
         },
         "description": "Show Popup"
       }
